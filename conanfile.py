@@ -23,7 +23,7 @@ class ProtobufConan(ConanFile):
                "with_zlib": [True, False],
                "fPIC": [True, False],
                "lite": [True, False]}
-    default_options = {"with_zlib": False,
+    default_options = {"with_zlib": True,
                        "shared": False,
                        "fPIC": True,
                        "lite": False}
@@ -40,7 +40,7 @@ class ProtobufConan(ConanFile):
 
     def requirements(self):
         if self.options.with_zlib:
-            self.requires("zlib/1.2.11@conan/stable")
+            self.requires("zlib/1.2.11")
 
     def source(self):
         tools.get("{0}/archive/v{1}.tar.gz".format(self.homepage, self.version))
