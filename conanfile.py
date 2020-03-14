@@ -43,7 +43,7 @@ class ProtobufConan(ConanFile):
             self.requires("zlib/1.2.11@conan/stable")
 
     def source(self):
-        tools.get("{0}/archive/v{1}.tar.gz".format(self.homepage, self.version))
+        tools.get("{0}/archive/v3.5.2.tar.gz".format(self.homepage))
         extracted_dir = self.name + "-" + self.version
         os.rename(extracted_dir, self._source_subfolder)
 
