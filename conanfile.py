@@ -37,6 +37,7 @@ class ProtobufConan(ConanFile):
     def configure(self):
         if self.settings.os == "Windows":
             del self.options.fPIC
+        del self.settings.compiler.libcxx
 
     def requirements(self):
         if self.options.with_zlib:
