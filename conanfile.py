@@ -17,7 +17,7 @@ class ProtobufConan(ConanFile):
     exports = ["LICENSE.md"]
     exports_sources = ["CMakeLists.txt", "protobuf.patch"]
     generators = "cmake"
-    settings = "os", "arch", "compiler", "build_type"
+    settings = "os", "compiler", "build_type", "arch"
     short_paths = True
     options = {"shared": [True, False],
                "with_zlib": [True, False],
