@@ -44,7 +44,7 @@ class ProtobufConan(ConanFile):
 
     def source(self):
         tools.get("{0}/archive/v3.5.2.tar.gz".format(self.homepage))
-        extracted_dir = self.name + "-" + self.version
+        extracted_dir = self.name + "-3.5.2"
         os.rename(extracted_dir, self._source_subfolder)
 
     def _configure_cmake(self):
